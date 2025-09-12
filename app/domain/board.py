@@ -7,7 +7,7 @@ class ShogiBoard:
         # 持ち駒
         self.captured = {"black": [], "white": []}
 
-    def place_piece(self, x: int, y: int, piece: str):
+    def place_piece(self, x: int, y: int, piece: int):
         """指定のマスに駒を置く（x=0..8, y=0..8）"""
         self.board[y][x] = piece
 
