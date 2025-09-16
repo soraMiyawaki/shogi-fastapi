@@ -30,4 +30,13 @@ class ShogiRule:
         B: True,  # 角
         R: True,  # 飛  
     }
-   
+   # 王の座標に対して王手を掛けれる駒化の探索
+def sq_attaked(self,board:Board,kx:int,ky:int) -> bool:
+    for row in range(9) :
+        for column in range(9):
+            action=ShogiRule[board[row][column]]
+            for i in action:
+                if (kx,ky)==(row,column)+i:
+                    print(kx,ky)
+                    return True
+    return False  
